@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <tr>
+        <td>被下载的文件</td>
+    </tr>
+    <c:forEach items="${fileName}" var="fileName">
+        <tr>
+            <td><a href="down?fileName=${fileName}">24郭宇实验七.docx</a></td>
+        </tr>
+    </c:forEach>
+    </body>
+</html>

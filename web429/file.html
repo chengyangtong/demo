@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 基础样式 */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+ 
+/* 消息容器 */
+.message {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+ 
+/* 接收的消息（左侧） */
+.message.received {
+  justify-content: flex-start;
+}
+ 
+/* 发送的消息（右侧） */
+.message.sent {
+  justify-content: flex-end;
+}
+ 
+/* 头像 */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+ 
+/* 气泡 */
+.bubble {
+  position: relative;
+  max-width: 70%;
+  min-width: 80px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+ 
+/* 接收的气泡（白色） */
+.message.received .bubble {
+  margin-left: 12px;
+  background-color: #fff;
+  border-top-left-radius: 0;
+}
+ 
+/* 发送的气泡（绿色） */
+.message.sent .bubble {
+  margin-right: 12px;
+  background-color: #95ec69;
+  border-top-right-radius: 0;
+}
+ 
+/* 气泡小尾巴（伪元素实现） */
+.message.received .bubble::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+ 
+.message.sent .bubble::before {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #95ec69;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+ 
+/* 消息内容 */
+.content {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+}
+ 
+/* 时间戳 */
+.time {
+  font-size: 11px;
+  color: #999;
+  text-align: right;
+  margin-top: 4px;
+}
+ 
+/* 发送方时间戳（靠左） */
+.message.sent .time {
+  text-align: left;
+}
+</style>
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 接收的消息（左侧） -->
+        <div class="message received">
+          <img class="avatar" src="https://example.com/friend-avatar.jpg" alt="好友头像">
+          <div class="bubble">
+            <div class="content">你好！最近怎么样？</div>
+            <div class="time">10:00</div>
+          </div>
+        </div>
+       
+        <!-- 发送的消息（右侧） -->
+        <div class="message sent">
+          <div class="bubble">
+            <div class="content">我很好，谢谢关心！</div>
+            <div class="time">10:01</div>
+          </div>
+          <img class="avatar" src="https://example.com/my-avatar.jpg" alt="我的头像">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/user/save" method="post" accept-charset="UTF-8">
+        <div>
+            用户名：<input type="text" name="name">
+        </div>
+        <div>
+            爱好：<input type="checkbox" name="hobby" value="游泳">游泳
+            <input type="checkbox" name="hobby" value="跑步">跑步
+            <input type="checkbox" name="hobby" value="打球">打球
+            <input type="checkbox" name="hobby" value="看电影">看电影
+        </div>
+        <div>
+            朋友：<input type="radio" name="friend" value="张三">张三
+            <input type="radio" name="friend" value="李四">李四
+            <input type="radio" name="friend" value="王五">王五
+            <input type="radio" name="friend" value="赵六">赵六
+        </div>
+        <div>
+            职业：<select name="careers">
+                <option value="学生">学生</option>
+                <option value="老师">老师</option>
+                <option value="医生">医生</option>
+                <option value="程序员">程序员</option>
+            </select>
+        </div>
+        <div>
+            户籍：<select name="houseRes">
+            <option value="北京">北京</option>
+            <option value="上海">上海</option>
+            <option value="广州">广州</option>
+            <option value="深圳">深圳</option>
+            </select>
+        </div>
+        <div>
+            个人描述：<textarea name="remark" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+        </div>
+    </form>
+</body>
+</html>

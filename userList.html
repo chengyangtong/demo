@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h3>用户列表</h3>
+        <a href="/user/input">继续添加</a>
+        <table border="1">
+            <tr>
+                <td>用户名</td>
+                <td>爱好</td>
+                <td>朋友</td>
+                <td>职业</td>
+                <td>户籍</td>
+                <td>个人描述</td>
+            </tr>
+            <c:forEach items="${users}" var="user">
+                <tr>
+                    <td>郭宇</td>
+                    <td>
+                       跑步
+                    </td>
+                    <td>
+                        李四
+                    </td>
+                    <td>学生</td>
+                    <td>北京</td>
+                    <td>四合院</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+</body>
+</html>
